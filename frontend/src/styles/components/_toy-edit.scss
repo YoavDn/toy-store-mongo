@@ -1,0 +1,15 @@
+ .edit-toy-form {
+     display: flex;
+     flex-direction: column;
+     background-color: $clr3;
+     padding: 30px;
+     width: 500px;
+     border-radius: 1.4rem;
+     margin: auto;
+
+
+     .save-btn {
+         margin: auto;
+         width: 200px;
+     }
+ }
