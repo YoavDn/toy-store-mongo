@@ -1,5 +1,5 @@
 <template>
-    <main class="toys-section">
+    <main v-if="toys" class="toys-section">
         <toy-filter class="toys-filter" :filter="filter" @setFilter="setFilter" />
         <toy-list class="toys-list" :toys="toys" @deleteToy="deleteToy" />
     </main>
@@ -29,7 +29,6 @@ export default {
     computed: {
         toys() { return this.$store.getters.getToys },
         filter() { return this.$store.getters.getFilter },
-        toys() { return this.$store.getters.getToys }
     }
 }
 </script>

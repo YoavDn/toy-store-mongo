@@ -23,7 +23,6 @@
 <script>
 import { toyService } from '../services/toy.service.js'
 import customSelect from '../components/custom-select.vue'
-import { refThrottled } from '@vueuse/core'
 
 export default {
     name: 'toyEdit',
