@@ -13,6 +13,8 @@
     <el-button @click="login">Login</el-button>
 
   </el-form>
+  <p>does'nt have an account ?</p>
+  <el-button @click="toSignup">Sign up</el-button>
 
   <h2>Where to Find us </h2>
 
@@ -43,6 +45,9 @@ export default {
       this.$store.dispatch({ type: 'login', userInputs: this.userInputs })
         .then(user => this.$router.push('/toy'))
         .catch(err => console.log('err wrong crudsafdkjlk'))
+    },
+    toSignup() {
+      this.$router.push('/signup')
     }
   }
 

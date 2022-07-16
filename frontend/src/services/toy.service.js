@@ -3,9 +3,9 @@ import axios from 'axios';
 
 
 console.log(process.env.NODE_ENV);
-const API = (process.env.NODE_ENV !== 'development')
-    ? 'api/toy'
-    : 'http://localhost:3030/api/toy'
+const API = (process.env.NODE_ENV === 'development')
+    ? 'http://localhost:3030/api/toy'
+    : 'api/toy'
 
 export const toyService = {
     query,
