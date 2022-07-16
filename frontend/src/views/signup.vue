@@ -9,7 +9,7 @@ import signUpForm from '../components/sign-up-form.vue';
 name: 'signup'
 const store = useStore()
 
-const addUser = (newUserInputs) => store.dispatch({ type: 'addUser', newUserInputs })
+const addUser = (newUserInputs) => store.dispatch({ type: 'addUser', userToAdd: newUserInputs })
 
 </script>
     

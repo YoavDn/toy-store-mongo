@@ -7,12 +7,25 @@ export const userStore = {
     },
 
     mutations: {
+        setUser: (state, { newUser }) => state.user = newUser,
+
+    },
+
+    getters: {
+        getUser: ({ user }) => user
     },
 
     actions: {
-        addUser({ commit }, { newUser }) {
-            userService.addUser()
-            // console.log(newUser);
+
+        async addUser({ commit }, { userToAdd }) {
+            const newUser = await userService.addUser(userToAdd)
+            commit({ type: 'setUser', newUser })
+
+        },
+        async login({ commit }, { userInputs }) {
+            const user = await userService.getUser(userInputs)
+            commit({ type: 'setUser', user })
+            return user
         }
     }
 
