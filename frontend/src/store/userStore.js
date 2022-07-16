@@ -7,7 +7,7 @@ export const userStore = {
     },
 
     mutations: {
-        setUser: (state, { newUser }) => state.user = newUser,
+        setUser: (state, { user }) => state.user = user,
 
     },
 
@@ -18,8 +18,8 @@ export const userStore = {
     actions: {
 
         async addUser({ commit }, { userToAdd }) {
-            const newUser = await userService.addUser(userToAdd)
-            commit({ type: 'setUser', newUser })
+            const user = await userService.addUser(userToAdd)
+            commit({ type: 'setUser', user })
 
         },
         async login({ commit }, { userInputs }) {

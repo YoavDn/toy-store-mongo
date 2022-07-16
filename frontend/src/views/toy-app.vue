@@ -1,5 +1,7 @@
 <template>
+    <h3 v-if="user">welcome back {{ user.fullname }}</h3>
     <main v-if="toys" class="toys-section">
+
         <toy-filter class="toys-filter" :filter="filter" @setFilter="setFilter" />
         <toy-list class="toys-list" :toys="toys" @deleteToy="deleteToy" />
     </main>
@@ -29,6 +31,7 @@ export default {
     computed: {
         toys() { return this.$store.getters.getToys },
         filter() { return this.$store.getters.getFilter },
+        user() { return this.$store.getters.getUser }
     }
 }
 </script>
