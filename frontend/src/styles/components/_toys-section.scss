@@ -1,0 +1,13 @@
+.toys-section {
+    margin-inline: $layoutPadding;
+    display: flex;
+
+    .toys-list {
+        flex-basis: 80%;
+    }
+
+    .toys-filter {
+        flex-basis: 20%;
+        padding-right: 1rem;
+    }
+}

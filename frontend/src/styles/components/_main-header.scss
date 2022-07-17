@@ -1,0 +1,40 @@
+.main-header {
+    background-color: $clr3;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    // min-height: 7vh;
+    line-height: 5rem;
+    // margin-bottom: 5rem;
+    box-shadow: 0px 0px 1px $clr5;
+
+
+    .main-nav {
+        display: flex;
+        justify-content: space-between;
+        margin-inline: $layoutPadding;
+
+        nav {
+            flex-basis: 30%;
+            display: flex;
+            justify-content: end;
+        }
+    }
+
+    .nav-link {
+        font-size: 2.2rem;
+        margin-inline-start: 1.3rem;
+
+    }
+
+    .home {
+        color: red
+    }
+
+    .about {
+        color: green
+    }
+
+    .toys {
+        color: rgb(170, 170, 0)
+    }
+
+}

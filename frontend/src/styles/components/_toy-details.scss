@@ -1,0 +1,52 @@
+.toy-details {
+    padding-inline: 20px;
+    height: 60vh;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-areas:
+        " desc img img"
+        " desc img img"
+        "desc img img ";
+
+    .detail-main-text {
+        grid-area: desc;
+        text-align: start;
+        padding: 2rem;
+
+        h2 {
+            text-transform: capitalize;
+            font-size: 3rem;
+            line-height: 5rem;
+            text-align: start;
+        }
+
+        h3 {
+            font-size: 2rem;
+        }
+
+        button {
+            margin-top: 1rem;
+            display: block;
+            margin: auto;
+            font-size: 2rem;
+            height: 4rem;
+
+        }
+    }
+
+
+    .details-img {
+        grid-area: img;
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    @media (max-width: 700px) {
+        grid-area:
+            'img img img'
+            "img img img "
+            "desc desc btn";
+    }
+}
