@@ -11,6 +11,7 @@
 <script>
 import toyList from '../components/toy-list.vue';
 import toyFilter from '../components/toy-filter.vue';
+import { getUser } from '../../../backend/api/user/user.controller';
 export default {
     components: {
         toyList,
@@ -19,6 +20,7 @@ export default {
     },
     created() {
         this.$store.dispatch({ type: 'loadToys' })
+        this.$store.dispatch({ type: 'getLoggedInUser' })
     },
     methods: {
         deleteToy(toy) {

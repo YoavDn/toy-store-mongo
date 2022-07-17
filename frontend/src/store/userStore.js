@@ -16,6 +16,14 @@ export const userStore = {
     },
 
     actions: {
+        async getLoggedInUser({ commit }) {
+            try {
+                const user = await userService.getLoggedInUser()
+                commit({ type: 'setUser', user })
+            } catch {
+                console.log('No user is logged in');
+            }
+        },
 
         async addUser({ commit }, { userToAdd }) {
             const user = await userService.addUser(userToAdd)
