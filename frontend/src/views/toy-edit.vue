@@ -44,7 +44,9 @@ export default {
     created() {
         const { toyId } = this.$route.params
         if (toyId) {
-            toyService.getById(toyId).then(toy => this.toy = { ...toy })
+            toyService.getById(toyId).then(toy => {
+                return this.toy = { ...toy }
+            })
         } else {
             this.toy = toyService.getEmptyToy()
         }

@@ -19,13 +19,15 @@ function remove(toy) {
     return httpService.delete(`toy/${toy._id}`)
 }
 
-function save(toy) {
-    if (toy._id) return httpService.put(`toy/${toy._id}`, toy)
-    return httpService.post('toy', toy)
+async function save(toy) {
+    console.log(toy);
+    if (toy._id) return await httpService.put(`toy/${toy._id}`, toy)
+    return await httpService.post('toy', toy)
 }
 
-function getById(toyId) {
-    return httpService.get('toy/' + toyId)
+async function getById(toyId) {
+    const toy = await httpService.get(`toy/${toyId}`)
+    return toy
 }
 
 function getEmptyToy() {
@@ -56,10 +58,6 @@ function getEmptyToy() {
 //     if (toy._id) return axios.put(`${API}/${toy._id}`, toy, { withCredentials: true }).then(({ data }) => data);
 //     return axios.post(API, toy).then(({ data }) => data)
 
-// }
-
-// function getById(toyId) {
-//     return axios.get(API + '/' + toyId).then(({ data }) => data)
 // }
 
 // function getEmptyToy() {
