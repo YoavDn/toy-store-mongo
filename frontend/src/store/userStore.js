@@ -34,6 +34,10 @@ export const userStore = {
             const user = await userService.getUser(userInputs)
             commit({ type: 'setUser', user })
             return user
+        },
+        logout({ commit }) {
+            userService.logout()
+            commit({ type: 'setUser' })
         }
     }
 

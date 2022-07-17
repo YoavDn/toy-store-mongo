@@ -11,6 +11,10 @@
     align-self: center;
 }
 
+.align-center {
+    align-items: center;
+}
+
 
 // List 
 .clean-list {
@@ -33,6 +37,10 @@
 
 .shadow {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.bold {
+    font-weight: 700;
 }
 
 // Aspect ratios

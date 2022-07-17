@@ -4,7 +4,8 @@ import { httpService } from './http.service';
 export const userService = {
     getUser,
     addUser,
-    getLoggedInUser
+    getLoggedInUser,
+    logout
 }
 
 function addUser(newUser) {
@@ -17,4 +18,8 @@ function getUser(user) {
 
 function getLoggedInUser() {
     return httpService.get('auth')
+}
+
+function logout() {
+    return httpService.post('auth/logout')
 }
