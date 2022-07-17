@@ -1,8 +1,9 @@
 import axios from "axios"
+axios.defaults.withCredentials = true
 
 const API = (process.env.NODE_ENV === 'development')
     ? 'http://localhost:3030/api/auth'
-    : 'api/toy'
+    : 'api/auth'
 
 export const userService = {
     getUser,

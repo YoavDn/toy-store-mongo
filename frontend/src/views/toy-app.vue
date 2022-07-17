@@ -1,5 +1,6 @@
 <template>
     <h3 v-if="user">welcome back {{ user.fullname }}</h3>
+
     <main v-if="toys" class="toys-section">
 
         <toy-filter class="toys-filter" :filter="filter" @setFilter="setFilter" />
